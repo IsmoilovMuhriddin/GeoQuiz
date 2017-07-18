@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class QuizzActivity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quizz);
+        setContentView(R.layout.activity_quiz);
     }
 
 
