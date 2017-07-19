@@ -29,10 +29,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/trueBtn"
+                android:background="@color/trueBtn"
+                android:layout_marginRight="15sp"
                 android:text="@string/trueBtn"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/falseBtn"
                 android:id="@+id/falseBtn"
                 android:text="@string/falseBtn"/>
         </LinearLayout>
