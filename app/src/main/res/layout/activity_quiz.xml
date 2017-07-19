@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.inhaprojects.muhriddin.geoquiz.QuizActivity">
+    android:orientation="vertical"
+    tools:context="com.inhaprojects.muhriddin.geoquiz.QuizActivity"
+    android:gravity="center">
 
     <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="587dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World"
-            android:id="@+id/printView"
-            android:textSize="40sp"/>
-
-        <EditText
+            android:id="@+id/questText"
+            android:gravity="center"
+            android:layout_marginBottom="15sp"
+            android:text="@string/questionCap"
+            />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/inputName"
-            android:textSize="30sp"
-            android:text="NoName"/>
-
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="GreetingMethod"
-            android:text="OK" />
+            android:gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trueBtn"
+                android:text="@string/trueBtn"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/falseBtn"
+                android:text="@string/falseBtn"/>
+        </LinearLayout>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
