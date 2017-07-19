@@ -3,6 +3,7 @@
     <string name="falseBtn">FALSE</string>
     <string name="trueBtn">TRUE</string>
     <string name="questionCap">Canberra is capital of Australia</string>
+    <string name="next_button"><![CDATA[Next>]]></string>
 
     <string-array name="Country">
         <item> </item>

@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity {
-
+    private static  int score ;
     private TextView questionView ;
     private Button trueButton;
     private Button falseButton;
@@ -19,7 +19,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-
+        score=0;
         questionView =  (TextView) findViewById(R.id.questText);
         trueButton = (Button) findViewById(R.id.trueBtn);
         falseButton =(Button)findViewById(R.id.falseBtn);
@@ -27,15 +27,18 @@ public class QuizActivity extends AppCompatActivity {
         trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toast = Toast.makeText(QuizActivity.this, "Correct",Toast.LENGTH_SHORT);
+                score++;
+                toast = Toast.makeText(QuizActivity.this, "Correct \n Your Score: "+ score,Toast.LENGTH_SHORT);
+
                 toast.show();
+
             }
         });
 
         falseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toast = Toast.makeText(QuizActivity.this, "Incorrect",Toast.LENGTH_SHORT);
+                toast = Toast.makeText(QuizActivity.this, "Incorrect \n Your Score:"+ score,Toast.LENGTH_SHORT);
                 toast.show();
             }
         });
