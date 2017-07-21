@@ -1,6 +1,7 @@
 package com.inhaprojects.muhriddin.geoquiz;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -71,7 +72,6 @@ public class QuizActivity extends AppCompatActivity {
         falseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (QuestionArray[questionNumber].isAnswer() == false) {
                     score++;
                     nextCheck();
@@ -91,7 +91,16 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-
+        cheatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QuizActivity.this, CheatActivity.class);
+                intent.putExtra("data1", QuestionArray[questionNumber].getQuestionId());
+                intent.putExtra("data2", questionNumber);
+                intent.putExtra("data3", QuestionArray[questionNumber].isAnswer());
+                startActivityForResult(intent, 12345);
+            }
+        });
     }
 
     @Override
