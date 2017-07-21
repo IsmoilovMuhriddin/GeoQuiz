@@ -16,10 +16,22 @@ public class QuizActivity extends AppCompatActivity {
     private Button nextButton;
     private ImageButton falseButton;
     private Toast toast;
+
+    Question[] QuestionArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        QuestionArray = new Question[]{
+                new Question(R.string.question_africa, true),
+                new Question(R.string.question_americas, true),
+                new Question(R.string.question_asia, true),
+                new Question(R.string.question_australia, true),
+                new Question(R.string.question_mideast, false),
+                new Question(R.string.question_oceans, true),
+
+        };
 
         score=0;
         questionView =  (TextView) findViewById(R.id.questText);
