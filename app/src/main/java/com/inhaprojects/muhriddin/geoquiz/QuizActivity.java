@@ -35,10 +35,12 @@ public class QuizActivity extends AppCompatActivity {
 
         score=0;
         questionView =  (TextView) findViewById(R.id.questText);
-        trueButton = (ImageButton) findViewById(R.id.trueBtn);
-        falseButton =(ImageButton)findViewById(R.id.falseBtn);
+        trueButton = (ImageButton) findViewById(R.id.trueButton);
+        falseButton = (ImageButton) findViewById(R.id.falseButton);
         nextButton = (Button) findViewById(R.id.nextButton);
-        
+
+        questionView.setText(QuestionArray[0].getQuestionId());
+
         trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
