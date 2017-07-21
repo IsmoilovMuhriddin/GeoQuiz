@@ -18,6 +18,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView questionView ;
     private ImageButton trueButton;
     private Button nextButton;
+    private Button cheatButton;
     private ImageButton falseButton;
     private Toast toast;
     static int questionNumber;
@@ -43,7 +44,7 @@ public class QuizActivity extends AppCompatActivity {
 
         };
 
-
+        cheatButton = (Button) findViewById(R.id.cheatButton);
         questionView =  (TextView) findViewById(R.id.questText);
         trueButton = (ImageButton) findViewById(R.id.trueButton);
         falseButton = (ImageButton) findViewById(R.id.falseButton);
