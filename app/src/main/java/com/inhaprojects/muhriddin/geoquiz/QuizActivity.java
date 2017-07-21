@@ -5,14 +5,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity {
     private static  int score ;
     private TextView questionView ;
-    private Button trueButton;
-    private Button falseButton;
+    private ImageButton trueButton;
+    private Button nextButton;
+    private ImageButton falseButton;
     private Toast toast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +23,10 @@ public class QuizActivity extends AppCompatActivity {
 
         score=0;
         questionView =  (TextView) findViewById(R.id.questText);
-        trueButton = (Button) findViewById(R.id.trueBtn);
-        falseButton =(Button)findViewById(R.id.falseBtn);
-
+        trueButton = (ImageButton) findViewById(R.id.trueBtn);
+        falseButton =(ImageButton)findViewById(R.id.falseBtn);
+        nextButton = (Button) findViewById(R.id.nextButton);
+        
         trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
