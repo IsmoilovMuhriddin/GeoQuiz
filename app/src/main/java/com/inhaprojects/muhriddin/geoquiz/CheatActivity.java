@@ -25,13 +25,19 @@ public class CheatActivity extends AppCompatActivity {
         showAnswerButton = (Button) findViewById(R.id.showAnswerButton);
 
         questTextView.setText(str);
-        ansTextView.setText("");
+        ansTextView.setText("" + answer);
         showAnswerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ansTextView.setText("" + answer);
+                Intent sendMessage = new Intent(CheatActivity.this, QuizActivity.class);
+                sendMessage.putExtra("data1", "hello back");
+                setResult(RESULT_OK);
+                finish();
+
             }
         });
 
     }
+
+
 }

@@ -31,7 +31,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="show answer"
+            android:text="back again"
             android:id="@+id/showAnswerButton"
             android:layout_margin="1dp" />
 

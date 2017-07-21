@@ -104,6 +104,18 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        String str = "";
+        if (requestCode == 12345) {
+            str = data.getStringExtra("data1");
+        }
+        toast = Toast.makeText(QuizActivity.this, str, Toast.LENGTH_SHORT);
+        toast.show();
+
+    }
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         Log.i("tag", "onSavedinstance is running  ..");
